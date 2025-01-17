@@ -15,7 +15,7 @@ Check out the [presentation](Presentation.pdf).
 The aim of our project was to create a dynamic painter network for analysis, and store it in a graph-based database.<br>
 A KNIME pipeline automatically loads (new) artists and artist coexhibitions into a Neo4j database after enriching the data using the Wikidata API.<br>
 
-By integrating two sources of data: the [PainterPalette dataset](https://github.com/me9hanics/PainterPalette) (which provides quantitative information about painters, including number of pictures per style) and coexhibitions of artists based on the e-flux website, we create a network of artist coexhibitions.
+By integrating two sources of data: the [PainterPalette dataset](https://github.com/me9hanics/PainterPalette) (which provides quantitative information about painters, including number of pictures per style) and coexhibitions of artists based on the e-flux website (snapshot from 2024 March is used as example data, taken from [this project](https://github.com/me9hanics/e-flux_scraping_coexhibition_networks?tab=readme-ov-file#coexhibition-network)), we create a network of artist coexhibitions.
 
 The pipeline created in KNIME processes the two datasets, cleans and robustly joins the artist names, and enriched through the Wikidata API, stored in a Neo4j database for analysis, and visualized in Gephi. We used clustering / community detection methods to identify artist communities, understanding to what extent nationalities and other aspects create homophily in the network, and exploring common attributes over the graph.
 
